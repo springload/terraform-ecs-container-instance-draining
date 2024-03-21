@@ -27,3 +27,9 @@ variable "tags" {
   description = "Additional tags (_e.g._ { BusinessUnit : ABC })"
   default     = {}
 }
+
+variable "log_retention_days" {
+  description = "The number of days to retain log events. Set to 0 for never expire."
+  type        = number
+  default     = 14
+}

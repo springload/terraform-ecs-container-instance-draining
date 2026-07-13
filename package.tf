@@ -1,3 +1,5 @@
-data "local_file" "lambda_zip" {
-  filename = "${path.module}/source/index.zip"
+data "archive_file" "lambda_zip" {
+  type        = "zip"
+  source_file = "${path.module}/source/index.py"
+  output_path = "${path.module}/source/index.zip"
 }
